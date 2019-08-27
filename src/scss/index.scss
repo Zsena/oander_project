@@ -1,0 +1,306 @@
+
+//variables
+
+$brown: #c4a37b;
+$white: #fff;
+$black: #000000;
+$dark: #3a3a3a;
+$text-brown: $brown;
+$nav-text-color: #575757;
+$toggler-color: #898989;
+$separator-color: rgba(196, 163, 123, 0.1);
+
+$btn-bg-color: $black;
+$btn-color: $white;
+$jumbotron-bg-color: #f4f4f4;
+$h1-color: #3a3a3a;
+
+
+$main-text-color: $dark;
+$section-bg-color: #292929;
+
+$card-title-color: #5a5a5a;
+$card-btn-color: $brown;
+
+$footer-title-color: $dark;
+$footer-text-color: #a9a9a9;
+
+$form-title: #3a3a3a;
+$form-placeholder-color: #999999;
+$shadow-color: #b8b8b8;
+
+$base-font: 'Montserrat', sans-serif;
+
+@import "node_modules/bootstrap-scss/bootstrap";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background-color: $white;
+    font-family: $base-font;
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* BUTTONS */
+
+.front-btn {
+  background-color: $btn-bg-color;
+  color: $btn-color;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.front-btn-secondary {
+  color: $card-btn-color;
+  font-weight: 500;
+}
+
+/* HEADER */
+header {
+  min-height: 5rem;
+  height: 100%;
+  .navbar {
+      padding: 35px 0 5px 0;
+      a {
+          padding-right: 1.875rem;
+          padding-left: 1.875rem;
+          color: $nav-text-color;
+          font-size: 18px;
+          font-weight: 500;
+      }
+    .navbar-toggler {
+      color: $toggler-color;
+      border: 2px solid $toggler-color;
+      border-radius: 0;
+      padding: 3px;
+      width: 30px;
+      height: 30px;
+      margin-right: 23px;
+      .navbar-toggler-icon {
+        width: 1em;
+        height: 1em;
+      }
+    }
+  }
+}
+
+/* HERO SECTION */
+section.hero-bg {
+  min-height: 335px;
+  height: 100%;
+  background-color: $jumbotron-bg-color;
+  .container.pattern {
+     background-image: url("/assets/img/pattern copy1.png");
+     background-position: right;
+     background-size: 70%;
+     background-repeat: no-repeat;
+     height: 100%;
+   .new-layer {
+     background-image: url("/assets/img/new-layer.png");
+     background-position: right;
+     background-size: 40%;
+     background-repeat: no-repeat;
+     position: absolute;
+     padding: 9rem;
+     right: -15px;
+     top: -16rem;
+   }
+  }
+ .message-col {
+   padding: 5.25rem 1rem 2.25rem 1rem;
+   h1 {
+     color: $h1-color;
+     margin-bottom: 2.5rem;
+     span.brown-text {
+       color: $text-brown;
+     }
+   }
+   p {
+     padding: 30px 0 20px 0;
+     width: 25.9375rem;
+     span {
+       font-weight: 700;
+     }
+   }
+   .front-btn {
+     padding-left: 3.125rem;
+     padding-right: 3.125rem;
+   }
+ }
+}
+
+/* ICONS */
+section.icon-content {
+  background-color: $section-bg-color;
+  min-height: 180px;
+  height: 100%;
+  .icon-col {
+    border-right: 1px solid $separator-color;
+    border-top: 1px solid $separator-color;
+    margin: 0;
+    height: 100%;
+    padding: 15px;
+    &:nth-child(3n+2) {
+      border-right: 0;
+    }
+    &:nth-child(3n+4) {
+      border-right: 0;
+    }
+    figure {
+      img {
+        height: 100%;
+        min-height: 80px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+
+/* CARDS */
+section.cards-content {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  .card {
+    width: 100%;
+    min-height: 435px;
+    .card-body {
+      h5.card-title {
+        color: $card-title-color;
+        font-weight: 700;
+        font-size: 18px;
+        min-height: 70px;
+      }
+    }
+    .svg {
+      width: 30px;
+    }
+  }
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid #dbdbdb;
+  min-height: 280px;
+  height: 100%;
+  padding: 40px 0 50px 0;
+  h6 {
+    color: $footer-title-color;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  p {
+    color: $footer-text-color;
+    font-size: 13px;
+    margin-bottom: 0.5rem;
+  }
+  a {
+    color: $footer-text-color;
+  }
+  form {
+    input {
+      margin-bottom: 20px;
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+    a.front-btn {
+      display: flow-root;
+      display: -ms-flexbox;
+    }
+  }
+}
+
+/* STICKY */
+.sticky-footer {
+  border-top: 1px solid #dbdbdb;
+  min-height: 70px;
+  height: 100%;
+  img {
+    transform: rotate(-90deg);
+    width: 35px;
+    padding: 15px 0;
+  }
+}
+
+/*==========  Mobile First Method  ==========*/
+
+///* Custom, iPhone Retina */
+//@media only screen and (min-width : 320px) {
+//
+//}
+//
+///* Extra Small Devices, Phones */
+//@media only screen and (min-width : 480px) {
+//
+//}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  body h1 {
+    font-size: 3.125rem;
+  }
+  section.hero-bg {
+    .hero-layer {
+      padding: 5.25rem 1rem 2.25rem 1rem;
+    }
+  }
+  section.icon-content {
+    .icon-col {
+      border-right: 1px solid $separator-color;
+      border-top: 0;
+      margin: 30px 0;
+      height: 100px;
+      padding: 0;
+      &:nth-child(3n+2) {
+        border-right: 1px solid $separator-color;
+      }
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  section.hero-bg {
+    min-height: 620px;
+    height: 100%;
+    .hero-layer {
+      padding: 6.25rem 10rem 6.25rem 0;
+    }
+    .img-shadow {
+      background-image: url("/assets/img/shadow.png");
+      background-size: 70%;
+      background-position: 50%;
+      background-repeat: no-repeat;
+    }
+  }
+  .message-col {
+    padding: 7.5rem 0 9.375rem 1rem;
+    h1 {
+      margin-bottom: 0;
+    }
+    p {
+      padding: 30px 0 20px 0;
+      width: 25.9375rem;
+      span {
+        font-weight: 700;
+      }
+    }
+    .front-btn {
+      padding-left: 3.125rem;
+      padding-right: 3.125rem;
+    }
+  }
+}
+
+///* Large Devices, Wide Screens */
+//@media only screen and (min-width : 1200px) {
+//
+//}
